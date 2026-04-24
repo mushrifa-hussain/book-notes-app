@@ -1,0 +1,48 @@
+.addBook h1{
+    margin-top: 3rem;
+    color: rgb(137, 80, 48);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.addBook{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addBook > form{
+    margin-top: 20px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.addBook > form > input, .addBook > form > textarea{
+    width: 50%;
+    height: 50px;
+    padding: 4px 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: medium;
+}
+
+.addBook > form > #note{
+    padding: 10px 12px;
+    font-size: large;
+    height: 15rem;
+}
+
+.addBook > form > button { 
+    background-color: rgb(137, 80, 48);
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 9px 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}

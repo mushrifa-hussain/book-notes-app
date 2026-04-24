@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div class="note-container">
+    <img src="<%= book[0].cover_i != 0 ? `https://covers.openlibrary.org/b/id/${book[0].cover_i}-M.jpg` : 'https://dummyimage.com/180x260/cccccc/000000&text=No+Cover' %>" alt="cover">
+    <h2><%= book[0].title %></h2>
+    <p>how strongly I recommend it: <b><%= book[0].rating %></b> /10.</p>
+    <p>Date read: <%= book[0].date.toISOString().split("T")[0] %></p>
+    <p><%= book[0].notes %></p>
+    <div class="buttons">
+        <a href="/edit/<%= book[0].id %>"><button>Edit</button></a>
+        <a href="/delete/<%= book[0].id %>"><button>Delete</button></a>
+    </div>
+
+</div>
+
+<%- include("partials/footer.ejs") %>

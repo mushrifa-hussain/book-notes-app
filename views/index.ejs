@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="heading">Book Notes</h1>
+<div class="about">
+    <p>Hi, I’m Mushrifa Hussain.</p>
+    <p>This is my personal space where I keep track of the books I’ve read, rate them, and capture my thoughts after finishing each one. Reading helps me learn new perspectives, and writing notes helps me remember what truly mattered from each book.</p>
+    <p>Every book here represents a small part of my journey—some inspired me, some taught me valuable lessons, and some simply gave me a new way to look at things. This space is not just a list, but a collection of ideas, reflections, and growth.</p>
+    <p>Feel free to explore my collection and see what I’ve been reading. You can also add a new book and start building your own reading journey, one book at a time.</p>
+    <p>Reading, for me, is more than just finishing a book—it’s about understanding ideas and carrying them into real life. Some books leave a lasting impact, while others spark small changes that slowly shape who we become. This space helps me revisit those moments whenever I need them.</p>
+    <p>As this collection grows, it becomes a reflection of my learning journey—what I’ve explored, what I’ve understood, and how my thinking has evolved. It’s a simple habit, but one that adds a lot of meaning over time.</p>
+    <p>Let your reading journey grow, one page at a time.</p>
+
+    <div class="a-div">
+        <a href="/add"><button>Add book</button></a>
+    </div>
+    <h2 style="margin-bottom: 20px; color: rgb(137, 80, 48);">My Collection of Books</h2>
+</div>
+
+<div class="order-box">
+   <form action="/order" method="post">
+    <select name="order" id="order">
+        <option value="rating">Order by rating</option>
+        <option value="date">Order by recency</option>
+    </select>
+    <button type="submit">Apply</button>
+    </form> 
+</div>
+
+
+
+<% if(locals.books){ %>
+    <% books.forEach((book) => { %>
+        <div class="book-container">
+            <img src="<%= book.cover_i != 0 ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : 'https://dummyimage.com/180x260/cccccc/000000&text=No+Cover' %>" alt="cover">
+            <h2><%= book.title %></h2>
+            <p>Rating: <%= book.rating %>/10. Date read: <%= book.date.toISOString().split("T")[0] %></p>
+            <a href="/notes/<%= book.id %>" style="font-size: medium;">Read my notes</a>
+            <p style="margin-top: 10px; font-size: large;" class="notes"><%= book.notes %></p>
+        </div>
+    <% }); %>
+<% }else{ %>
+    <h1>No books added</h1>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
