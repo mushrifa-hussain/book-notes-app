@@ -24,7 +24,10 @@ This is my personal web application where I track the books I’ve read, rate th
 
 ## 📸 Screenshots
 
-*Add your screenshots here*
+<img width="1919" height="1072" alt="image" src="https://github.com/user-attachments/assets/0628fb20-0088-4cea-8171-875f2927ca0e" />
+<img width="1919" height="1070" alt="image" src="https://github.com/user-attachments/assets/5e1f6fe5-83d9-4eed-8db4-bd93a4cfa532" />
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/02b3b4b4-0289-4432-8630-15f3196c13c7" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b7925f7c-fe9f-46f9-a739-71b9364a5ee9" />
 
 ---
 
